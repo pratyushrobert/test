@@ -24,6 +24,7 @@ def write_file():
 
 def auto_commit():
     try:
+        write_file()
         subprocess.run(['git', 'add', '.'], check=True)
         print("Running git add .")
         
