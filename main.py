@@ -40,6 +40,19 @@ def auto_commit():
         print(f"An error occurred: {e}")
 
 
+
+def scrpt():
+    print("starting the script")
+    print("commiting changes every 10 seconds till 5 commits are made")
+    print("1st commit")
+    num_commits = int(input("Enter the number of commits you want to make: "))
+    for i in range(num_commits+1):
+        print(f"{i+1} commit")
+        auto_commit()
+        time.sleep(10)
+
+
+
 #main
 
 print("welcome to auto commit script")
@@ -47,23 +60,8 @@ print("this script will automatically commit changes to your git repository ever
 print("press 1 to start the script \n press 2 to exit")
 y = int(input("enter your choice: "))
 if y == 1:
-    print("starting the script")
-    print("commiting changes every 10 seconds till 5 commits are made")
-    print("1st commit")
-    auto_commit()
-    time.sleep(10)
-    print("2nd commit")
-    auto_commit()
-    time.sleep(10)
-    print("3rd commit")
-    auto_commit()
-    time.sleep(10)
-    print("4th commit")
-    auto_commit()
-    time.sleep(10)
-    print("5th commit")
-    auto_commit()
-    print("script has finished commiting changes")
+    scrpt()
+
 elif y == 2:
     print("exiting the script")
     sys.exit()
