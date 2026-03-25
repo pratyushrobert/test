@@ -43,7 +43,7 @@ def auto_commit():
 
 def scrpt():
     print("starting the script")
-    print("commiting changes every 10 seconds till 5 commits are made")
+    print("commiting changes every 10 seconds")
     print("1st commit")
     num_commits = int(input("Enter the number of commits you want to make: "))
     for i in range(num_commits+1):
